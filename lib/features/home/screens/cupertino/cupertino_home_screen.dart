@@ -40,7 +40,7 @@ class CupertinoHomeScreen extends StatelessWidget {
 
       ),
       child: Center(
-        child: Text("welcome".tr(), style: TextStyle(color: CupertinoColors.white)),
+        child: Text("welcome".tr()),
       )
     );
   }
