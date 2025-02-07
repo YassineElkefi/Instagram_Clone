@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:instagram_clone/core/providers/auth_provider.dart';
-import 'package:instagram_clone/features/auth/screens/login_screen.dart';
+import 'package:instagram_clone/features/auth/screens/material/material_login_screen.dart';
 import 'package:provider/provider.dart';
 
 void main(){
@@ -12,7 +12,7 @@ void main(){
           MaterialApp(
             home: ChangeNotifierProvider(
               create: (_) => AuthProvider(),
-              child: LoginScreen())
+              child: MaterialLoginScreen())
           )
         );
 
@@ -21,7 +21,8 @@ void main(){
         expect(find.text('Login'), findsOneWidget);
         expect(find.text('Forgot Password?'), findsOneWidget);
         expect(find.text('Continue with Facebook'), findsOneWidget);
-        expect(find.text('Don\'t have an account? Sign up'), findsOneWidget);
+        expect(find.text('Don\'t have an account?'), findsOneWidget);
+        expect(find.text('Sign Up'), findsOneWidget);
     });
 
     testWidgets('Should show error or invalid login', (WidgetTester tester) async{
@@ -29,7 +30,7 @@ void main(){
           MaterialApp(
             home: ChangeNotifierProvider(
               create: (_) => AuthProvider(),
-              child: LoginScreen())
+              child: MaterialLoginScreen())
           )
         );
 
@@ -47,7 +48,7 @@ void main(){
           MaterialApp(
             home: ChangeNotifierProvider(
               create: (_) => AuthProvider(),
-              child: LoginScreen())
+              child:MaterialLoginScreen())
           )
         );
 

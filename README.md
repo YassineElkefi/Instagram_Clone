@@ -6,7 +6,14 @@ A modern Instagram clone built with Flutter and Firebase, showcasing core social
 ## Tech Stack
 
 - Frontend: Flutter 3.x
-- State Management: Provider/Riverpod
+- State Management: Provider
+
+## Main Features
+- State Management with provider
+- Language Selector ( English, French & Tunisian )
+- Theme Switcher (Light & Dark modes)
+- Shared prefrences for preserving user data
+- Splash screen
 
 ## Prerequisites
 

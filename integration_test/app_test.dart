@@ -16,7 +16,7 @@ void main(){
         providers: [
         ChangeNotifierProvider(create: (context) => AuthProvider()),
         ],
-      child: MyApp()
+      child: MyMaterialApp()
       )
       );
       await tester.pumpAndSettle();

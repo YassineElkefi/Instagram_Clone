@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:instagram_clone/core/providers/auth_provider.dart';
-import 'package:instagram_clone/features/auth/screens/login_screen.dart';
-import 'package:instagram_clone/features/home/screens/home_screen.dart';
+import 'package:instagram_clone/features/auth/screens/material/material_login_screen.dart';
+import 'package:instagram_clone/features/home/screens/material/material_home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main(){
@@ -13,7 +13,7 @@ void main(){
         MaterialApp(
           home: ChangeNotifierProvider(
             create: (_) => AuthProvider(),
-            child: HomeScreen()
+            child: MaterialHomeScreen()
           )
         )
       );
@@ -28,7 +28,7 @@ void main(){
         MaterialApp(
           home: ChangeNotifierProvider(
             create: (_) => AuthProvider(),
-            child: HomeScreen()
+            child: MaterialHomeScreen()
           )
         )
       );
@@ -36,7 +36,7 @@ void main(){
       await tester.tap(find.byIcon(Icons.logout));
       await tester.pumpAndSettle();
 
-      expect(find.byType(LoginScreen), findsOneWidget);
+      expect(find.byType(MaterialLoginScreen), findsOneWidget);
     });
   });
 }
